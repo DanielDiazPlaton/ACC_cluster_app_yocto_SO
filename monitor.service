@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor Cluster
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/ACC_cluster_app
+Restart=always
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target
